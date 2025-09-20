@@ -1,0 +1,53 @@
+{
+  "name": "ayora-food-journal",
+  "version": "1.0.0",
+  "description": "Ayora Food Journal - Advanced food tracking with image recognition, voice input, and Ayurvedic dietitian features",
+  "main": "serve-demo.js",
+  "scripts": {
+    "start": "node serve-demo.js",
+    "demo": "node serve-demo.js",
+    "deploy": "chmod +x deploy.sh && ./deploy.sh",
+    "test": "node test-api.js",
+    "dev": "node serve-demo.js",
+    "serve": "node serve-demo.js",
+    "build": "echo 'Build complete - static files ready'",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install && cd ..",
+    "start-all": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\" \"node serve-demo.js\"",
+    "docker-up": "docker-compose up --build",
+    "docker-down": "docker-compose down",
+    "clean": "rm -rf node_modules backend/node_modules frontend/node_modules",
+    "reset": "npm run clean && npm run install-all"
+  },
+  "keywords": [
+    "food-journal",
+    "ayurvedic",
+    "dietitian",
+    "image-recognition",
+    "voice-input",
+    "nutrition",
+    "healthcare",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Ayora Development Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ayora-food-journal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/ayora-food-journal/issues"
+  },
+  "homepage": "https://ayora-food-journal.com",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
